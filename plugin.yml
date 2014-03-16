@@ -1,0 +1,40 @@
+name: XcraftChunky
+version: 0.1
+author: INemesisI
+description: Requires XcraftLibrary v1.6.2
+
+main: de.xcraft.INemesisI.Chunky.XcraftChunky
+load: POSTWORLD
+
+depend: [XcraftLibrary, WorldGuard, Vault]
+softdepend: [Essentials, iConomy, BOSEconomy]
+
+commands:
+  chunkregion:
+    aliases: cr
+    
+permissions:
+    xcraftchunky.admin:
+        description: Access  to reload/save commands
+        children:
+            xcraftchunky.save: true
+            xcraftchunky.load: true
+            xcraftchunky.reload: true
+            xcraftchunky.delete.all: true
+            removechunky.removechunk.all: true
+            xcraftchunky.info.all: true
+        default: op
+    xcraftchunky.region:
+        description: Access  to all region commands
+        children:
+            xcraftchunky.create: true
+            xcraftchunky.delete: true
+            xcraftchunky.list: true
+            xcraftchunky.info: true
+            xcraftchunky.addchunk: true
+            xcraftchunky.removechunk: true
+            xcraftchunky.addowner: true
+            xcraftchunky.removeowner: true
+            xcraftchunky.addmemner: true
+            xcraftchunky.removemember: true
+        default: op

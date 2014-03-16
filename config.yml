@@ -1,0 +1,21 @@
+Worlds:
+- world
+Price: 
+  Region:
+    create: 500
+    delete: -100
+  Chunk:
+    #A equation for the price calculation, where c is the amount of Chunks in the Region.
+    #The Multiplier will be multiplied on top of the equation
+    equation: '50 * c'
+    min: 50
+    max: 1000
+  Multiplier:
+    use: false
+    World:
+      world: 1.0
+    Biome:
+      PLAIN: 1.0
+    Group:
+      default: 1.0
+  
